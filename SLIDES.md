@@ -5,9 +5,8 @@
 Bill Seremetis (@bserem)  
 Drupal Implementor  
 https://www.drupal.org/u/bserem
-![SRM](https://github.com/bserem/git-workshop/blob/slides/images/srm.png?raw=true)
-![ZP](https://github.com/bserem/git-workshop/blob/slides/images/srm.png?raw=true)
-![Zehnplus](https://github.com/bserem/git-workshop/blob/slides/images/srm.png?raw=true)
+
+![SRM](https://github.com/bserem/git-workshop/blob/slides/images/srm_logo.png?raw=true)
 
 ---
 
@@ -204,9 +203,63 @@ Note:
 Για να προσθέσεις ένα remote (είτε επειδή δεν έχεις είτε επειδή θες περισσότερα)
 εκτελείς την: `git remote add <remote_name> <path_or_server>`.
 
+---
+
+### Branches
+
+![SRM](https://github.com/bserem/git-workshop/blob/slides/images/branches.png?raw=true)
+
+Note:
+Χρησιμοποιούμε τα branches για να αναπτύξουμε χαρακτηριστικά, απομονόνοντας τις νέες αυτές
+προσθήκες από τον υπόλοιπο κωδικά μας.
+Το git ξεκινάει πάντα με ένα `master` branch.
 
 ---
 
-Bill Seremetis (bserem) - January 2017
-for DrupalDay Patras
+#### Δημιουργία branch
+
+```
+git checkout -b feature_x
+```
+
+Note:
+Επιστροφή στο master:
+git checkout master
+
+---
+
+#### Push ενός branch
+
+```
+git push origin <branch> 
+```
+
+---
+
+#### Merging
+
+```
+git merge <branch>
+```
+
+Note:
+Στο branch στο οποίο θέλουμε να φέρουμε τα περιεχόμενα κάποιου άλλου, τρέχουμε την εντολή
+για το merge.
+
+---
+
+#### Ενημέρωση από repository
+
+```
+git pull
+```
+και
+```
+git fetch
+```
+
+---
+
+Βασίλης (Bill) Σερεμέτης (bserem) - Φεβρουάριος 2017
+για το Drupal Day στην Πάτρα
 with ideas and images from http://rogerdudler.github.io/git-guide/
