@@ -1,6 +1,4 @@
-# Git down and dirty
-
----
+## Git down and dirty
 
 Bill Seremetis (@bserem)  
 Drupal Implementor  
@@ -10,7 +8,7 @@ https://www.drupal.org/u/bserem
 
 ---
 
-## Τι είναι το Git;
+### Τι είναι το Git;
 Note:
 Το Git είναι ένα σύστημα ελέγχου εκδόσεων (version control system, VCS) που
 αναπτύχθηκε απο τον Linus Torvalds και χρησιμοποιείται ευρέως στην ανάπτυξη
@@ -36,10 +34,6 @@ Note:
 πολλοί developers να εργαστούν στο ίδιο έργο χωρίς να χρειάζεται να μοιράζονται
 το ίδιο δίκτυο. Η άλλη εκδοχή είναι τα centralized VCS.
 
-Στα centralized VCS υπάρχει ένα κεντρικό αποθετήριο (repository, γιατί αν το πεις
-αποθετήριο θα σε κοιτάνε περίεργα) με το οποίο συγχρονίζονται όλοι οι clients.
-Κάθε client έχει ένα πλήρες αντίγραφο του repository τοπικά για να εργαστεί.
-
 ---
 
 ### The 3 states of insanity!
@@ -59,7 +53,7 @@ Note:
 
 ---
 
-#### Τι είναι όλα αυτά;;;
+### Τι είναι όλα αυτά;;;
 Πρέπει να αρχίσεις να σκέφτεσαι πολυδιάστατα, ευτυχώς είναι εύκολο.
 Όταν σε ένα αρχείο που το παρακολουθεί το Git γίνει μια αλλαγή, αυτή είναι αμέσως
 αναγνωρίσιμη από το Git. Μπορούμε να την αποθηκεύσουμε **προσωρινά** βάζοντας τη
@@ -72,7 +66,7 @@ repository του Git!
 
 ---
 
-To Git κάνει edit στα άρχεια;;;
+To Git κάνει edit στα άρχεια;
 
 Note:
 Σε γενικές γραμμές το Git δεν κάνει αλλαγές στα αρχεία, δηλαδή το Git δεν πρέπει
@@ -94,8 +88,10 @@ Note:
 
 ---
 
-#### Δημιουργία ενός νέου repository
-`git init`
+### Δημιουργία ενός νέου repository
+```
+   git init
+```
 
 Note:
 Φτιάξε ένα φάκελο, και μέσα σε αυτόν τρέξε:
@@ -104,7 +100,7 @@ Note:
 
 ---
 
-#### Αντιγραφή ενός υπάρχοντος repository
+### Αντιγραφή ενός υπάρχοντος repository
 ```
 git clone /path/to/repository
 git clone username@host:/path/to/repository
@@ -112,13 +108,17 @@ git clone username@host:/path/to/repository
 
 Note:
 Αν θες να αντιγράψεις ένα τοπικό repository εκτελείς:
-`git clone /path/to/repository`
+```
+   git clone /path/to/repository
+```
 Για ένα απομακρυσμένο (remote, συγκράτησε τη λέξη):
-`git clone username@host:/path/to/repository`
+```
+git clone username@host:/path/to/repository
+```
 
 ---
 
-#### Workflow
+### Workflow
 Το τοπικό repository μπορεί να έχει αρχεία στις 3 καταστάσεις που περιγράψαμε
 παραπάνω:
 
@@ -154,7 +154,7 @@ Note:
 
 ---
 
-#### Προσθήκη αρχείων στο stage
+### Προσθήκη αρχείων στο stage
 ```
 git add <filename>
 git add *
@@ -168,7 +168,7 @@ Note:
 
 ---
 
-#### Αποθήκευση αλλαγών στο Git
+### Αποθήκευση αλλαγών στο Git
 ```
 git commit -m "Your Commit Message"
 ```
@@ -177,7 +177,35 @@ git commit -m "Your Commit Message"
 
 ---
 
-#### Push & Pull
+### Προβολή του ιστορικού
+
+```
+commit 3d73fd21a40502c0dc410c7e3398d98e7d7106c9
+Author: Bill Seremetis <bill@seremetis.net>
+Date:   Fri Feb 17 13:17:12 2017 +0200
+
+    Prepare slides version of the repository.
+
+commit 9bbb3762f5f7b8e65f713424d891be3bf682d961
+Merge: 33f447b cc286e1
+Author: Bill Seremetis <bill@seremetis.net>
+Date:   Fri Feb 17 13:10:01 2017 +0200
+
+    Merge branch 'master' into slides
+
+```
+
+Με την εντολή log:
+
+```
+git log
+git log -p
+git log --oneline
+```
+
+---
+
+### Push & Pull
 
 ```
 git push origin master
@@ -191,7 +219,7 @@ Note:
 
 ---
 
-#### Πολλαπλά remote repositories
+### Πολλαπλά remote repositories
 
 ```
 git remote add <remote_name> <path_or_server>
@@ -216,7 +244,7 @@ Note:
 
 ---
 
-#### Δημιουργία branch
+### Δημιουργία branch
 
 ```
 git checkout -b feature_x
@@ -228,7 +256,7 @@ git checkout master
 
 ---
 
-#### Push ενός branch
+### Push ενός branch
 
 ```
 git push origin <branch> 
@@ -236,7 +264,7 @@ git push origin <branch>
 
 ---
 
-#### Merging
+### Merging
 
 ```
 git merge <branch>
@@ -248,7 +276,7 @@ Note:
 
 ---
 
-#### Ενημέρωση από repository
+### Ενημέρωση από repository
 
 ```
 git pull
