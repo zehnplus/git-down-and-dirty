@@ -2,8 +2,7 @@
  * Solarized Light theme for reveal.js.
  * Author: Achim Staebler
  */
-@import url(../../lib/font/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic,700italic);
 /**
  * Solarized colors by Ethan Schoonover
  */
@@ -19,7 +18,7 @@ body {
   background-color: #fdf6e3; }
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #657b83; }
@@ -45,7 +44,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #586e75;
-  font-family: "League Gothic", Impact, sans-serif;
+  font-family: "Fira Sans", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
