@@ -5,6 +5,9 @@
 Bill Seremetis (@bserem)  
 Drupal Implementor  
 https://www.drupal.org/u/bserem
+![SRM](https://github.com/bserem/git-workshop/blob/slides/images/srm.png?raw=true)
+![ZP](https://github.com/bserem/git-workshop/blob/slides/images/srm.png?raw=true)
+![Zehnplus](https://github.com/bserem/git-workshop/blob/slides/images/srm.png?raw=true)
 
 ---
 
@@ -41,7 +44,7 @@ Note:
 ---
 
 ### The 3 states of insanity!
-![Git workflows](https://raw.githubusercontent.com/bserem/static/master/images/trees.png)
+![Git workflows](https://github.com/bserem/git-workshop/blob/slides/images/trees.png?raw=true)
 
 Όταν δουλεύουμε με το Git ζητάμε από αυτό να παρατηρεί κάποια αρχεία για αλλαγές.
 Τα αρχεία που παρατηρεί είναι τα tracked files, οτιδήποτε άλλο είναι untracked.
@@ -55,16 +58,24 @@ Note:
 * commited: οι αλλαγές μας είναι αποθηκεύμενες και η παρούσα κατάσταση του αρχείου
   είναι αποθηκευμένη στο Git
 
+---
+
 #### Τι είναι όλα αυτά;;;
 Πρέπει να αρχίσεις να σκέφτεσαι πολυδιάστατα, ευτυχώς είναι εύκολο.
 Όταν σε ένα αρχείο που το παρακολουθεί το Git γίνει μια αλλαγή, αυτή είναι αμέσως
 αναγνωρίσιμη από το Git. Μπορούμε να την αποθηκεύσουμε **προσωρινά** βάζοντας τη
 στο stage, ή μόνιμα κάνοντας commit.
 
+Note:
 **ΠΡΟΣΟΧΗ:** ως αποθήκευση δεν αναφερόμαστε στην αποθήκευση του αρχείου από το
 πρόγραμμα επεξεργασίας, αλλά στην αποθήκευση των αλλαγών του αρχείου στο τοπικό
 repository του Git!
 
+---
+
+To Git κάνει edit στα άρχεια;;;
+
+Note:
 Σε γενικές γραμμές το Git δεν κάνει αλλαγές στα αρχεία, δηλαδή το Git δεν πρέπει
 να το μπερδέψεις με κάποιον editor. Το Git απλά παρατηρεί τις αλλαγές στα αρχεία
 όπως αυτά βρίσκονται στο filesystem (δηλαδή στο σκληρό σου δίσκο).
@@ -73,38 +84,52 @@ repository του Git!
 του, ή σε μια παράλληλη (περισσότερα σε λίγο) και διάφορα άλλα. Στις περιπτώσεις
 αυτές το Git επηρεάζει τα αρχεία στο filesystem.
 
-# Αρκετά με τη θεωρία, 'git it to me'
+---
+
+### Αρκετά με τη θεωρία, 'git it to me'
 *^προσπάθεια για catchy τίτλο, προσπεράστε τη...*
 
+Note:
 Για να αρχίσει το Git να κάνει τα μαγικά του για εμάς, πρέπει να του ζήτησουμε να
 παρακολουθεί ένα φάκελο (folder) στο σύστημα αρχείων (filesystem).
 
-## Δημιουργία ενός νέου repository
+---
+
+#### Δημιουργία ενός νέου repository
+`git init`
+
+Note:
 Φτιάξε ένα φάκελο, και μέσα σε αυτόν τρέξε:
 `git init`
 για να φτιάξεις ένα νέο repository.
 
-## Αντιγραφή ενός υπάρχοντος repository
+---
+
+#### Αντιγραφή ενός υπάρχοντος repository
+```
+git clone /path/to/repository
+git clone username@host:/path/to/repository
+```
+
+Note:
 Αν θες να αντιγράψεις ένα τοπικό repository εκτελείς:
 `git clone /path/to/repository`
 Για ένα απομακρυσμένο (remote, συγκράτησε τη λέξη):
 `git clone username@host:/path/to/repository`
 
-## Workflow
+---
+
+#### Workflow
 Το τοπικό repository μπορεί να έχει αρχεία στις 3 καταστάσεις που περιγράψαμε
 παραπάνω:
 
-* Αρχεία με αλλαγές που δεν έχουν γίνει stage
-* Αρχεία που είναι στο stage αλλά δεν έχουν γίνει commit
-* Commited αρχεία
-
-Αυτές οι τρεις κατάστάσεις είναι γνωστές και ως:
 * Working Directory
 * Index (stage)
 * HEAD
 
-Όταν ζητάμε από το git να μας δείξει το status του repository στο οποίο βρισκόμαστε
-απαντάει με πληροφορίες σχετικές με τις παραπάνω καταστάσεις:
+---
+
+### Git Status
 
 ```
 [git_down_and_dirty:master]$ git status
@@ -122,32 +147,58 @@ Changes not staged for commit:
 	modified:   README.md
 ```
 
+Note:
 Μόλις έμαθες και την δεύτερη εντολή για το git, την
 `git status`
 με την οποία το git σε ενημερώνει για οτιδήποτε συμβαίνει στο repository.
 Θα την πληκτρολογείς πολύ πολύ συχνά!
 
-## Προσθήκη αρχείων στο stage
+---
+
+#### Προσθήκη αρχείων στο stage
+```
+git add <filename>
+git add *
+```
+
+Note:
 Σε ένα repository που μόλις κάναμε `init` δεν έχουμε αρχεία τα οποία παρακολουθεί
 (track) το git. Για να προσθέσουμε ένα ή πολλά δεν έχουμε παρά να κάνουμε:
-`git add <filename>`
-`git add *`
-
 Κάνοντας `git add` βάζουμε και τις αλλαγές που έχουν τα αρχεία στο stage.
-**Αυτό είναι το πρώτο βήμα στο βασικό git workflow.** Για να κάνεις commit τις
-αλλαγές που μόλις πρόσθεσες δεν έχεις παρά να κάνεις απλά:
-`git commit -m "Your Commit Message"`
+**Αυτό είναι το πρώτο βήμα στο βασικό git workflow.**
+
+---
+
+#### Αποθήκευση αλλαγών στο Git
+```
+git commit -m "Your Commit Message"
+```
 
 Τώρα οι αλλαγές σου είναι στο **HEAD**, αλλά μόνο στο τοπικό σου repository.
 
-## Push & Pull
-*Καμία σχέση με το https://en.wikipedia.org/wiki/Pushover_%28video_game%29*
+---
 
+#### Push & Pull
+
+```
+git push origin master
+```
+
+Note:
 Για να στείλεις τις αλλαγές σου σε κάποιο άλλο repository εκτελείς την
 `git push origin master`
 όπου `master` είναι το branch που θες να στείλεις και `origin` το repository στο
 οποίο θες να στείλεις τις αλλαγές σου.
 
+---
+
+#### Πολλαπλά remote repositories
+
+```
+git remote add <remote_name> <path_or_server>
+```
+
+Note:
 Το git σου επιτρέπει να εργάζεσαι με πολλά branches και remotes. Για τα branches
 θα μιλήσουμε σε λίγο.
 Για να προσθέσεις ένα remote (είτε επειδή δεν έχεις είτε επειδή θες περισσότερα)
@@ -155,4 +206,7 @@ Changes not staged for commit:
 
 
 ---
+
 Bill Seremetis (bserem) - January 2017
+for DrupalDay Patras
+with ideas and images from http://rogerdudler.github.io/git-guide/
