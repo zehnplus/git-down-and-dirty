@@ -1,10 +1,10 @@
 ## Git down and dirty
 
-Bill Seremetis (@bserem)  
-Drupal Implementor  
-https://www.drupal.org/u/bserem
+Bill Seremetis (@bserem)
+Drupal Implementor
+zehnplus.ch
 
-![SRM](https://github.com/bserem/git-workshop/blob/slides/images/srm_logo.png?raw=true)
+![zehnplus](https://github.com/bserem/git-workshop/blob/slides/images/zehnplus_logo.png?raw=true)
 
 ---
 
