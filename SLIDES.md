@@ -1,10 +1,10 @@
 ## Git down and dirty
 
-Bill Seremetis (@bserem)
-Drupal Implementor
-zehnplus.ch
+Bill Seremetis (@bserem)  
+Drupal Implementor  
+[zehnplus.ch](https://zehnplus.ch)
 
-![zehnplus](https://github.com/bserem/git-workshop/blob/slides/images/zehnplus_logo.png?raw=true)
+![zehnplus](https://zehnplus.ch/sites/default/files/logo.png)
 
 ---
 
