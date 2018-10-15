@@ -37,7 +37,7 @@ Note:
 ---
 
 ### The 3 states of insanity!
-![Git workflows](https://github.com/bserem/git-workshop/blob/slides/images/trees.png?raw=true)
+![Git workflows](https://github.com/zehnplus/git-down-and-dirty/blob/master/images/trees.png?raw=true)
 
 Όταν δουλεύουμε με το Git ζητάμε από αυτό να παρατηρεί κάποια αρχεία για αλλαγές.
 Τα αρχεία που παρατηρεί είναι τα tracked files, οτιδήποτε άλλο είναι untracked.
@@ -235,7 +235,7 @@ Note:
 
 ### Branches
 
-![SRM](https://github.com/bserem/git-workshop/blob/slides/images/branches.png?raw=true)
+![SRM](https://github.com/zehnplus/git-down-and-dirty/blob/master/images/branches.png?raw=true)
 
 Note:
 Χρησιμοποιούμε τα branches για να αναπτύξουμε χαρακτηριστικά, απομονόνοντας τις νέες αυτές
@@ -288,8 +288,9 @@ git fetch
 
 ---
 
-Βασίλης Σερεμέτης (bserem)
-* Φεβρουάριος 2017 για το Drupal Day στην Πάτρα
-* Οκτώβριος 2017  για το Codeweek EU στο POS
-* Οκτωβριος 2018 για το CodeCamp Patras στο POS (workshop version)
-with ideas and images from http://rogerdudler.github.io/git-guide/
+### Ερωτήσεις;
+![questions](https://github.com/zehnplus/git-down-and-dirty/blob/master/images/DesperateQuestions.jpg?raw=true)
+
+### Ευχαριστώ!
+Βασίλης Σερεμέτης (bserem) - zehnplus.ch  
+Με ιδέες και εικόνες από: http://rogerdudler.github.io/git-guide/
