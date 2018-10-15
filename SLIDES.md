@@ -288,6 +288,8 @@ git fetch
 
 ---
 
-Βασίλης (Bill) Σερεμέτης (bserem) - Φεβρουάριος 2017
-για το Drupal Day στην Πάτρα
+Βασίλης Σερεμέτης (bserem)
+* Φεβρουάριος 2017 για το Drupal Day στην Πάτρα
+* Οκτώβριος 2017  για το Codeweek EU στο POS
+* Οκτωβριος 2018 για το CodeCamp Patras στο POS (workshop version)
 with ideas and images from http://rogerdudler.github.io/git-guide/
