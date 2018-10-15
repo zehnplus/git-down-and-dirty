@@ -1,7 +1,10 @@
 #!/bin/bash
 
-if [ $1 ]; then
-  echo "Hello $1!"
+if [ -z "$1" ] || [ -z "$2" ]
+then
+  echo "No arguments supplied"
+  echo "Usage: git_example.sh _NAME_ _SURNAME_"
+
 else
-  echo "Hello!"
+  echo "Hello $1 $2!"
 fi
